@@ -27,7 +27,8 @@ if ($conn->connect_error) {
 }
 
 $className = $_POST['name'];
-$sql = "INSERT INTO Class (name) VALUES ('" . $className . "')";
+$classNumber=$_POST['qty'];
+$sql = "INSERT INTO Class (name,qty) VALUES ('" . $className . "','".$classNumber."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Lưu thông tin Lớp học thành công";

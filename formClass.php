@@ -31,6 +31,11 @@
                 <input type="text" name="name" class="form-control" id="exampleInputPassword1" placeholder="Tên lớp học">
             </div>
 
+            <div class="form-group">
+                <label for="exampleInputPassword1">Số lượng lớp học</label>
+                <input type="text" name="qty" class="form-control" id="exampleInputPassword1" placeholder="Số lượng">
+            </div>
+
             <button type="submit" class="btn btn-default">Lưu</button>
         </form>
     </div>
