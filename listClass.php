@@ -37,18 +37,18 @@ if ($conn->connect_error) {
     //echo "Kết nối thành công";
 }
 
-
 ?>
 <div class="container">
     <div class="row">
-        <h1>List User!</h1>
-        <a href="addUser.php" class="btn btn-primary">Add User</a>
+        <h1>Danh sách lớp học!</h1>
+        <a href="formClass.php" class="btn btn-primary">Thêm mới</a>
         <table class="table">
             <thead>
             <tr>
                 <th>ID</th>
                 <th>Tên lớp học</th>
                 <th>Số lượng</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -60,9 +60,12 @@ if ($conn->connect_error) {
                 while($row = $result->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td>1</td>
+                        <td><?=$row["id"]?></td>
                         <td><?=$row["name"]?></td>
                         <td><?=$row["qty"]?></td>
+                        <td>
+                            <a href="updateClass.php?id=<?=$row["id"]?>" class='btn btn-info'>Cập nhật</a>
+                        </td>
                     </tr>
                     <?php
                 }

@@ -20,11 +20,15 @@
 
 </head>
 <body>
-
+<?php
+$classID = $_GET['id'];
+?>
 <div class="container">
     <div class="row">
-        <h1>Thêm mới Class</h1>
-        <form method="post" action="postAddClass.php">
+        <h1>Cập nhật Class</h1>
+        <form method="post" action="postUpdateClass.php">
+
+            <input type="hidden" value="<?=$classID?>" name="id">
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Tên</label>
