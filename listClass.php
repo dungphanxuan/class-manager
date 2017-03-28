@@ -63,8 +63,9 @@ if ($conn->connect_error) {
                         <td><?=$row["id"]?></td>
                         <td><?=$row["name"]?></td>
                         <td><?=$row["qty"]?></td>
-                        <td>
+                        <td style="width: 20%">
                             <a href="updateClass.php?id=<?=$row["id"]?>" class='btn btn-info'>Cập nhật</a>
+                            <a href="postDeleteClass.php?id=<?=$row["id"]?>" class='btn btn-warning' data-method="Post" data-confirm="Xác nhận xóa" onclick="return confirm('Are you sure you want to delete this item?');">Xóa</a>
                         </td>
                     </tr>
                     <?php
